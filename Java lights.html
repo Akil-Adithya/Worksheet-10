@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights!</title>
+    <style>
+        h1{
+            font-family:Courier New;
+            text-align:center;
+            background-color:#6be7ad
+        }
+        input[type=button] {
+            background-color: #00ffbb;
+            border: none;
+            color: black;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        input[type=button]:hover {
+            background-color: #58ff63;
+        }
+    </style>
+    <script>
+        let toggle = button => {
+            let element = document.getElementById("myimg");
+            let element2 = document.getElementById("myimg2");
+            let hidden = element.getAttribute("hidden");
+          
+            if (hidden) 
+            {
+                element.removeAttribute("hidden");
+                element2.setAttribute("hidden", "hidden");
+                img.innerText = "Hide image";
+            } 
+            else 
+            {
+                element.setAttribute("hidden", "hidden");
+                element2.removeAttribute("hidden");
+                img.innerText = "Show image";
+            }
+        }
+      </script>
+</head>
+<body>
+    <h1>The button Element</h1>
+    <button onclick="toggle(this);">Hide image</button>
+    <img id="myimg" src="on.png">
+    <img id="myimg2" src="off.png">
+</body>
+</html>
